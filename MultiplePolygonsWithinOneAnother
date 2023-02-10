@@ -1,0 +1,23 @@
+
+import turtle
+
+def polygon(sides):
+    t = turtle.Turtle()
+    t.width(3)
+    t.speed(0)
+    t.color("red")
+    
+    t.penup()
+    t.left(90)
+    t.forward(100)
+    t.right(90)
+    t.pendown()
+    t.hideturtle()
+    
+    for side in range(sides):
+        t.right(360/sides)
+        t.forward(50)
+        
+   
+for sides in range(2,12,1):
+    polygon(sides)
