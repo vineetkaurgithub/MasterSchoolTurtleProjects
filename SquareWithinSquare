@@ -1,0 +1,19 @@
+import turtle
+import math
+t = turtle.Turtle()
+t.speed(0)
+t.width(5)# 1:slowest, 3:slow, 5:normal, 10:fast, 0:fastest
+def sq(dis):
+  for i in range(4):
+    t.forward(dis)
+    t.left(90)  
+def fig(dis):
+  for k in range(1,5,1):
+    sq(dis)
+    t.left(45)
+    t.penup()
+    t.forward(dis/(math.sqrt(2)*(5-k)))
+    t.right(45)
+    t.pendown()
+    dis = (4-k)*dis/(5-k)    
+fig(200)
