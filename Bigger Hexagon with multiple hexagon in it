@@ -1,0 +1,31 @@
+import turtle
+t = turtle.Turtle()
+t.width(4)
+colors = ['red','purple','yellow','blue','orange','green'] 
+t.penup()
+t.backward(150)
+t.pendown()
+def triangle():
+  for i in range(3):		
+		t.right(120)
+		t.forward(40)
+def hexa(): 
+  for i in colors:
+    t.color(i)
+    triangle()
+    t.right(60)   
+t.speed(0)
+for i in range(6):
+  t.penup()
+  t.forward(40)
+  t.right(60)
+  t.forward(40)
+  t.left(120)
+  t.pendown()
+  hexa()
+  
+  
+    
+    
+          
+     
