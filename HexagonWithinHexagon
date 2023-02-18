@@ -1,0 +1,24 @@
+import turtle
+t = turtle.Turtle()
+t.speed(0) # 1:slowest, 3:slow, 5:normal, 10:fast, 0:fastest
+#t.forward(100)
+t.width(5)
+def hexa(dis):
+  for i in range(6):
+    t.forward(dis)
+    t.right(60)
+    
+def figure(n,dis):
+  for i in range(0,n):
+    hexa(dis*i + dis)
+    t.left(120)
+    t.penup()
+    t.forward(dis)
+    t.right(120)
+    t.pendown()
+    
+figure(5,30)
+    
+  
+
+
