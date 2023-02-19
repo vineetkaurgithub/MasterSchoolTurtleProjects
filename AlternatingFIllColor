@@ -1,0 +1,21 @@
+import turtle
+t = turtle.Turtle()
+t.speed(5) # 1:slowest, 3:slow, 5:normal, 10:fast, 0:fastest
+def square(length,fill_color):
+  t.fillcolor(fill_color)
+  t.begin_fill()
+  for i in range(4):
+    t.forward(length)
+    t.right(90)
+  t.end_fill()
+  
+def square_line(num_squares, color1, color2):
+  for i in range(num_squares):
+    if i % 2 == 0:
+      square(50,color1)
+    else:
+      square(50,color2)
+    t.forward(50)
+      
+square_line(6,'red','blue')
+  #https://www.pythonsandbox.com/code/pythonsandbox_u34006_Cht0uULNXskgM38Hi87d9sHX_v0.py
