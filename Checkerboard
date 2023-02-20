@@ -1,0 +1,38 @@
+import turtle
+t = turtle.Turtle()
+t.speed(0) 
+t.penup()
+t.backward(150)
+t.pendown()# 1:slowest, 3:slow, 5:normal, 10:fast, 0:fastest
+def square(length,fill_color):
+  t.fillcolor(fill_color)
+  t.begin_fill()
+  for i in range(4):
+    t.forward(length)
+    t.right(90)
+  t.end_fill()
+  
+def square_line(num_squares, color1, color2):
+  for i in range(num_squares):
+    if i % 2 == 0:
+      square(20,color1)
+    else:
+      square(20,color2)
+    t.forward(20)
+  t.penup()
+  t.backward(160)
+  t.left(90)
+  t.forward(20)
+  t.right(90)
+  t.pendown()
+      
+def checkerboard(num_squares, color1, color2):
+  for i in range(8):
+    if i % 2 == 0:
+      square_line(num_squares, color1, color2)
+    else:
+      square_line(num_squares, color2, color1)
+checkerboard(8,'black','white')
+      
+  
+  #https://www.pythonsandbox.com/code/pythonsandbox_u34006_HjvuH90eA3X4JkdDZNsRbxkF_v0.py
